@@ -1,8 +1,8 @@
-version: '3.9'
+version: "3.9"
 
 services:
   app:
-    build: 
+    build:
       context: .
       args:
         - DEV=true
@@ -18,7 +18,6 @@ services:
       - DB_USER=devuser
       - DB_PASS=changeme
     depends_on:
-      - db
   
   db:
     image: postgres:13-alpine
